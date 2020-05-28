@@ -1,17 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  *{
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: 0;
-  }
-  
   body,
   #root{
+<<<<<<< HEAD
     /* height: 100%; */
     background: #15092D;
+=======
+    height: 100vh;
+>>>>>>> parent of 6a0b672... :lipstick: Update in styles of some components
   }
 `
