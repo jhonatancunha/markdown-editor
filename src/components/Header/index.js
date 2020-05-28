@@ -5,14 +5,17 @@ import PropTypes from 'prop-types'
 import Button from '../common/Button'
 import SaveMessage from '../SaveMessage'
 
+// STYLE
+import { Wrapper } from './style'
+
 const Header = ({ isSaving, handleClear, handleCreate }) => {
   return (
-    <header>
+    <Wrapper>
       <SaveMessage isSaving={isSaving} />
 
       <Button onClick={handleCreate}>Criar Novo</Button>
       <Button onClick={handleClear}>Limpar</Button>
-    </header>
+    </Wrapper>
   )
 }
 

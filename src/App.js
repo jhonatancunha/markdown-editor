@@ -5,6 +5,9 @@ import { v4 } from 'node-uuid'
 import MarkDownEditor from './components/Content'
 import marked from 'marked'
 
+// STYLE
+import { GlobalStyle } from './style'
+
 //HighLight.js IMPORTAÇÃO DINAMICA
 import('highlight.js').then((hljs) => {
   marked.setOptions({
@@ -103,6 +106,8 @@ class App extends Component {
 
   render() {
     return (
+      <>
+      <GlobalStyle />
      <MarkDownEditor 
       value={this.state.value} 
       isSaving={this.state.isSaving}
@@ -117,6 +122,7 @@ class App extends Component {
       handleOpenFile={this.handleOpenFile}
       title={this.state.title}
     />
+    </>
     )
   }
 }
