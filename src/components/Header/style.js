@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 export const Wrapper = styled.header`
   background: #15092D;
   width: 100%;
@@ -5,17 +7,17 @@ export const Wrapper = styled.header`
   height: 53px;
   display: flex;
   align-items: center;
-@@ -13,21 +13,41 @@ export const Wrapper = styled.header`
-    margin: 5px;
-    width: 29px;
-    height: 31px;
-    :last-of-type {
-      margin-right: 20px;
-    }
-    :first-of-type {
-      margin-left: 20px;
-    }   
+  margin: 5px;
+  width: 29px;
+  height: 31px;
+
+  :last-of-type {
+    margin-right: 20px;
   }
+  :first-of-type {
+    margin-left: 20px;
+  }   
+}
   
   @media (max-width: 800px){
     width: 100vw;
