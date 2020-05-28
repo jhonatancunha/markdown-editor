@@ -4,24 +4,45 @@ import PropTypes from 'prop-types'
 // Components
 import Button from '../common/Button'
 import SaveMessage from '../SaveMessage'
+import HamburguerMenu from '../common/Hamburguer-Menu'
 
 // STYLE
-import { Wrapper } from './style'
+import { Wrapper,  ButtonPreview } from './style'
 
-const Header = ({ isSaving, handleClear, handleCreate }) => {
+// ICONS
+import {ReactComponent  as DeleteIcon} from '../../assets/remove.svg'
+import {ReactComponent as CreateIcon} from '../../assets/new.svg'
+
+const Header = ({ 
+  isSaving, 
+  handleClear, 
+  handleCreate, 
+  isMenuOpen, 
+  handleMenu,
+  handleChange,
+  title
+}) => {
   return (
     <Wrapper>
-      <SaveMessage isSaving={isSaving} />
+      <HamburguerMenu handleMenu={handleMenu} isMenuOpen={isMenuOpen} />
 
-      <Button onClick={handleCreate}>Criar Novo</Button>
-      <Button onClick={handleClear}>Limpar</Button>
+      
+
+      {/* <SaveMessage isSaving={isSaving} />*/}
+
+      <ButtonPreview>PREVIEW</ButtonPreview>
+      <CreateIcon onClick={handleCreate} />
+      <DeleteIcon onClick={handleClear} />
+     
     </Wrapper>
   )
 }
 
 Header.propTypes = {
   handleClear: PropTypes.func.isRequired,
-  handleCreate: PropTypes.func.isRequired
+  handleCreate: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired,
 }
 
 export default Header

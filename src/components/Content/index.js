@@ -5,41 +5,55 @@ import PropTypes from 'prop-types'
 import Header from '../Header'
 import Files from '../Files'
 
+// Styles
+import { Wrapper, WrapperCode, TextAreaCode, Footer, WrapperPreview, TitleInput, TitleInformation, WrapperTitle, } from './style'
+
 const MarkDownEditor = ({ 
   value, 
-  handleChange, 
   getMarkup,
   textareaRef,
   files,
+  handleChange,
   handleOpenFile,
   title,
   ...props
 }) => 
   (
-    <section className="editor">
-      <Header {...props} />
+    <Wrapper>
+    <WrapperCode>
+      <Header {...props} handleChange={handleChange} />
 
-      <Files files={files} handleOpenFile={handleOpenFile}  />
-      <input
-        onChange={handleChange('title')}
-        type="text" 
-        value={title} 
-        placeholder="Sem Título..."/>
+      <WrapperTitle>
+        <TitleInformation> TITLE </TitleInformation>
+        <TitleInput
+          onChange={handleChange('title')}
+          type="text" 
+          value={title} 
+          placeholder="Digite aqui um título para seu arquivo..."/>
+      </WrapperTitle>
 
-      <textarea
+      {/* <Files files={files} handleOpenFile={handleOpenFile}  />
+      */}
+
+      <TextAreaCode
+        placeholder="Digite aqui..."
         value={value} 
         onChange={handleChange('value')}
         autoFocus
         ref={textareaRef}
       />
 
-      <article className="view" dangerouslySetInnerHTML={getMarkup()} />
+      <Footer>
+        <span>2020.  <strong> Jhonatan Cunha</strong></span>
+      </Footer>
+    </WrapperCode>
 
-    </section>
-  )
+    <WrapperPreview className="view" dangerouslySetInnerHTML={getMarkup()} />
+  </Wrapper>  
+)
 
 MarkDownEditor.propTypes = {
-  title: PropTypes.string.isRequired,
+ 
   value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   getMarkup: PropTypes.func.isRequired,

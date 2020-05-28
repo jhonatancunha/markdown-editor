@@ -30,7 +30,8 @@ class App extends Component {
     this.state = {  
       ...this.initialState(),
       isSaving: null,
-      files: {}
+      files: {},
+      isMenuOpen: false
     }
 
     this.handleChange = (field) => (e) => {  
@@ -88,6 +89,12 @@ class App extends Component {
         id: fileID
       })
     }
+
+    this.handleMenu = () => {
+      this.setState({
+        isMenuOpen: !this.state.isMenuOpen
+      })
+    }
   }
 
   componentDidMount() {
@@ -121,6 +128,9 @@ class App extends Component {
       files={this.state.files}
       handleOpenFile={this.handleOpenFile}
       title={this.state.title}
+
+      isMenuOpen={this.state.isMenuOpen}
+      handleMenu={this.handleMenu}
     />
     </>
     )
