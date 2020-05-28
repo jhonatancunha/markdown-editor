@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // Components
-import Button from '../common/Button'
 import HamburguerMenu from '../common/Hamburguer-Menu'
+import SaveMessage from '../SaveMessage'
 
 // STYLE
 import { Wrapper,  ButtonPreview, SvgButtons } from './style'
@@ -18,15 +18,13 @@ const Header = ({
   isMenuOpen, 
   handleMenu,
   handlePreviewMobile,
-  open
+  open,
+  isSaving
 }) => {
   return (
     <Wrapper>
       <HamburguerMenu previewOpen={open} handleMenu={handleMenu} isMenuOpen={isMenuOpen} />
 
-      
-
-     
       <ButtonPreview previewOpen={open} onClick={handlePreviewMobile}>
         {open ? 'BACK' : 'PREVIEW'}
       </ButtonPreview>
@@ -35,7 +33,7 @@ const Header = ({
         <CreateIcon onClick={handleCreate} />
         <DeleteIcon onClick={handleClear} />
       </SvgButtons>
-     
+      <SaveMessage isSaving={isSaving} />
     </Wrapper>
   )
 }
@@ -43,8 +41,10 @@ const Header = ({
 Header.propTypes = {
   handleClear: PropTypes.func.isRequired,
   handleCreate: PropTypes.func.isRequired,
-  title: PropTypes.string.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired, 
+  handleMenu: PropTypes.func.isRequired,
+  handlePreviewMobile: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired
 }
 
 export default Header

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 
 
@@ -14,6 +15,11 @@ const Files = ({ handleOpenFile, files }) => {
       </ul>
     </div>
   )
+}
+
+Files.propTypes = {
+  handleOpenFile: PropTypes.func.isRequired,
+  files: PropTypes.object.isRequired
 }
 
 export default Files;

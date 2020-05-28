@@ -50,7 +50,7 @@ export const Footer = styled.footer`
   align-items: center;
 `
 
-//LEFT SIDE
+//ARTICLE SIDE
 export const WrapperPreview = styled.article`
   visibility: visible;
   background: #EFECEC;

@@ -6,11 +6,17 @@ import styled from 'styled-components'
 import {ReactComponent as Saved} from '../../assets/saved.svg'
 
 const Wrapper = styled.div`
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  position: relative;
 
+  @media (min-width: 801px){
+    position: absolute;
+    right: 10px;
+    right: 10px;
+  }
+
+  /* BREAKPOINTS HOVER FUNCIONAR SO EM DISPOSITIVO COMPATIVEL */
   @media (hover: hover){
+    transition: opacity 0.2s ease;
     svg{
       transition: opacity 0.2s ease;
       opacity: 0.5;
@@ -38,7 +44,7 @@ const Wrapper = styled.div`
 
 const SaveMessage = ({ isSaving }) => {
   return (
-    isSaving !== null && 
+    // isSaving !== null && 
       <Wrapper>
         {isSaving ? 'Salvando...' : <Saved />}
       </Wrapper>

@@ -24,38 +24,33 @@ const MarkDownEditor = ({
 }) => 
   (
     <Wrapper>
-       <SaveMessage isSaving={isSaving} />
 
-    <WrapperCode >
-      <Header {...props} open={isPreviewMobileOpen} handleChange={handleChange} />
+      <WrapperCode >
+        <Header {...props} isSaving={isSaving} open={isPreviewMobileOpen} />
 
-      <WrapperTitle  >
-        <TitleInformation> TITLE </TitleInformation>
-        <TitleInput
-          onChange={handleChange('title')}
-          type="text" 
-          value={title} 
-          placeholder="Digite aqui um título para seu arquivo..."/>
-      </WrapperTitle>
+        <WrapperTitle  >
+          <TitleInformation> TITLE </TitleInformation>
+          <TitleInput
+            onChange={handleChange('title')}
+            type="text" 
+            value={title} 
+            placeholder="Digite aqui um título para seu arquivo..."/>
+        </WrapperTitle>
 
-      {/* <Files files={files} handleOpenFile={handleOpenFile}  />
-      */}
+        <Files files={files} handleOpenFile={handleOpenFile}  />
+      
+        <TextAreaCode
+          placeholder="Digite aqui..."
+          value={value} 
+          onChange={handleChange('value')}
+          autoFocus
+          ref={textareaRef}
+        />
 
-      <TextAreaCode
-        placeholder="Digite aqui..."
-        value={value} 
-        onChange={handleChange('value')}
-        autoFocus
-        ref={textareaRef}
-      />
-
-    
-    </WrapperCode>
-    <WrapperPreview open={isPreviewMobileOpen} className="view" dangerouslySetInnerHTML={getMarkup()} />
-    
-    <Footer>
-      <span>2020.  <strong> Jhonatan Cunha</strong></span>
-    </Footer>
+      </WrapperCode>
+      <WrapperPreview open={isPreviewMobileOpen} className="view" dangerouslySetInnerHTML={getMarkup()} />
+      
+      <Footer><span>© 2020.  <strong> Jhonatan Cunha</strong></span></Footer>
 
   </Wrapper>  
 )
@@ -65,7 +60,8 @@ MarkDownEditor.propTypes = {
   value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   getMarkup: PropTypes.func.isRequired,
-  textareaRef: PropTypes.func.isRequired
+  textareaRef: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 

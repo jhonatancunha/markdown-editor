@@ -31,10 +31,9 @@ export const ButtonPreview = styled.button`
   display:none;
   
   @media (max-width: 800px){
-    position: absolute;
     display: block;
     margin-left: ${props => props.previewOpen ? '7px' : '0'};
-    width: ${props => props.previewOpen ? '24%' : '37%'};
+    width: ${props => props.previewOpen ? '9em' : '9em'};
     height: 39px;
     background: #C9144E;
     

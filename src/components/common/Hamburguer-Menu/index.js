@@ -16,7 +16,8 @@ export const HamburguerMenu = ({ isMenuOpen, handleMenu, previewOpen }) => {
 
 HamburguerMenu.propTypes = {
   isMenuOpen: PropTypes.bool.isRequired,
-  handleMenu: PropTypes.func.isRequired
+  handleMenu: PropTypes.func.isRequired,
+  previewOpen: PropTypes.bool
 }
 
 export default HamburguerMenu
