@@ -3,36 +3,38 @@ import PropTypes from 'prop-types'
 
 // Components
 import Button from '../common/Button'
-import SaveMessage from '../SaveMessage'
 import HamburguerMenu from '../common/Hamburguer-Menu'
 
 // STYLE
-import { Wrapper,  ButtonPreview } from './style'
+import { Wrapper,  ButtonPreview, SvgButtons } from './style'
 
 // ICONS
 import {ReactComponent  as DeleteIcon} from '../../assets/remove.svg'
 import {ReactComponent as CreateIcon} from '../../assets/new.svg'
 
 const Header = ({ 
-  isSaving, 
   handleClear, 
   handleCreate, 
   isMenuOpen, 
   handleMenu,
-  handleChange,
-  title
+  handlePreviewMobile,
+  open
 }) => {
   return (
     <Wrapper>
-      <HamburguerMenu handleMenu={handleMenu} isMenuOpen={isMenuOpen} />
+      <HamburguerMenu previewOpen={open} handleMenu={handleMenu} isMenuOpen={isMenuOpen} />
 
       
 
-      {/* <SaveMessage isSaving={isSaving} />*/}
+     
+      <ButtonPreview previewOpen={open} onClick={handlePreviewMobile}>
+        {open ? 'BACK' : 'PREVIEW'}
+      </ButtonPreview>
 
-      <ButtonPreview>PREVIEW</ButtonPreview>
-      <CreateIcon onClick={handleCreate} />
-      <DeleteIcon onClick={handleClear} />
+      <SvgButtons>
+        <CreateIcon onClick={handleCreate} />
+        <DeleteIcon onClick={handleClear} />
+      </SvgButtons>
      
     </Wrapper>
   )

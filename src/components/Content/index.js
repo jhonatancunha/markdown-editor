@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 //Components
 import Header from '../Header'
 import Files from '../Files'
+import SaveMessage from '../SaveMessage'
+
 
 // Styles
 import { Wrapper, WrapperCode, TextAreaCode, Footer, WrapperPreview, TitleInput, TitleInformation, WrapperTitle, } from './style'
@@ -16,14 +18,18 @@ const MarkDownEditor = ({
   handleChange,
   handleOpenFile,
   title,
+  isPreviewMobileOpen,
+  isSaving,
   ...props
 }) => 
   (
     <Wrapper>
-    <WrapperCode>
-      <Header {...props} handleChange={handleChange} />
+       <SaveMessage isSaving={isSaving} />
 
-      <WrapperTitle>
+    <WrapperCode >
+      <Header {...props} open={isPreviewMobileOpen} handleChange={handleChange} />
+
+      <WrapperTitle  >
         <TitleInformation> TITLE </TitleInformation>
         <TitleInput
           onChange={handleChange('title')}
@@ -43,12 +49,14 @@ const MarkDownEditor = ({
         ref={textareaRef}
       />
 
-      <Footer>
-        <span>2020.  <strong> Jhonatan Cunha</strong></span>
-      </Footer>
+    
     </WrapperCode>
+    <WrapperPreview open={isPreviewMobileOpen} className="view" dangerouslySetInnerHTML={getMarkup()} />
+    
+    <Footer>
+      <span>2020.  <strong> Jhonatan Cunha</strong></span>
+    </Footer>
 
-    <WrapperPreview className="view" dangerouslySetInnerHTML={getMarkup()} />
   </Wrapper>  
 )
 

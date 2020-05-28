@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 // STYLE
 import { Wrapper, Row } from './style'
 
-export const HamburguerMenu = ({ isMenuOpen, handleMenu }) => {
+export const HamburguerMenu = ({ isMenuOpen, handleMenu, previewOpen }) => {
   return (
-    <Wrapper onClick={handleMenu} open={isMenuOpen}>
+    <Wrapper onClick={handleMenu} previewOpen={previewOpen} open={isMenuOpen}>
       <Row></Row>
       <Row></Row>
       <Row></Row>

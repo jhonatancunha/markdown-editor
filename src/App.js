@@ -31,7 +31,8 @@ class App extends Component {
       ...this.initialState(),
       isSaving: null,
       files: {},
-      isMenuOpen: false
+      isMenuOpen: false,
+      isPreviewOpenMobile: false,
     }
 
     this.handleChange = (field) => (e) => {  
@@ -95,6 +96,12 @@ class App extends Component {
         isMenuOpen: !this.state.isMenuOpen
       })
     }
+
+    this.previewMobile = () => {
+      this.setState({
+        isPreviewOpenMobile: !this.state.isPreviewOpenMobile
+      })
+    }
   }
 
   componentDidMount() {
@@ -131,6 +138,9 @@ class App extends Component {
 
       isMenuOpen={this.state.isMenuOpen}
       handleMenu={this.handleMenu}
+      
+      handlePreviewMobile={this.previewMobile}
+      isPreviewMobileOpen={this.state.isPreviewOpenMobile}
     />
     </>
     )

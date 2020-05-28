@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
 //RIGHT SIDE
 export const WrapperCode = styled.section`
   width: 50vw;
+  height: calc(100vh - 77px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   /* BREAKPOINTS */
   @media (max-width: 800px){
@@ -18,19 +22,18 @@ export const WrapperCode = styled.section`
 export const TextAreaCode = styled.textarea`
   resize: none;
   width: 100%;
+  height: calc(100% - 53px);
+  
   background: #1C0F35;
   border: 0;
   border-top: 3px solid #231341;
-  border-bottom: 3px solid #231341;
+  border-right: 3px solid #231341;
 
-  
-  margin-top: 20px;
-  height: calc(100% - 50px);
   color: #EFECEC;
   padding: 20px 0 -0px 20px;
 
-  @media (max-width: 800px){
-    height: calc(100% - 20vh);
+  :focus{
+    border: 0;
   }
 `
 
@@ -39,7 +42,7 @@ export const Footer = styled.footer`
   bottom: 0;
   background: #15092D;
   border-top: 3px solid #231341;
-  height: 50px;
+  height: 77px;
   width: 100%;
   color: #C4C4C4;
   display: flex;
@@ -48,30 +51,44 @@ export const Footer = styled.footer`
 `
 
 //LEFT SIDE
-
 export const WrapperPreview = styled.article`
   visibility: visible;
   background: #EFECEC;
   color: #1B1919;
-  width: 50vw;
   padding: 20px;
-  height: calc(100vh - 50px);
+  display: flex;
+  flex: 1;
 
   @media (max-width: 800px){
-    visibility: hidden;
-    padding: 0;
+    visibility: ${ props => props.open ? 'visible' : 'hidden'};
+    cursor: pointer;
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 77px - 51px);
+    margin-top: 51px;
+
   }
 
 `
 
+//TITLE BAR
 export const WrapperTitle = styled.div`
-  display: flex;
-  margin-left: 20px;
+  display: ${props => props.open ? 'none' : 'flex'};
   align-items: center;
   position: relative;
   flex-grow: 1;
 
-  
+@media (max-width: 800px){
+  width: 90%;
+  padding-bottom: 15px;
+  padding-top: 6px;
+}
+
+@media (min-width: 801px){
+  margin-right: 36px;
+  margin-top: -55px;
+  width: calc(100% - 43px - 74.7px - 20px);
+}
 `
 
 export const TitleInformation = styled.div`

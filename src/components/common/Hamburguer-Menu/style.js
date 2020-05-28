@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.section`
   position: relative;
   cursor: pointer;
-  
+  display: ${props => props.previewOpen ? 'none' : 'block'};
 
   div:nth-child(1){
     transform: ${props => props.open ? 'rotate(45deg)' : 'rotate(0)'};
