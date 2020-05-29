@@ -1,53 +1,42 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 
 // ICONS
 import {ReactComponent as Saved} from '../../assets/saved.svg'
+import { ReactComponent as Attention } from '../../assets/attention.svg'
+import Loading from '../common/Loading'
 
-const Wrapper = styled.div`
-  position: relative;
+// STYLE
+import { Wrapper } from './style'
 
-  @media (min-width: 801px){
-    position: absolute;
-    right: 10px;
-    right: 10px;
+function Sign(props){
+  const status = props.isSaving;
+
+  if(status === null){
+    return (
+      <Wrapper  message={"Digite algo para salvar!"}>
+        <Attention />
+      </Wrapper>)
+    
+  }else if(status){
+    return (
+      <Wrapper  message={"Salvando!"}>
+          <Loading />
+      </Wrapper>
+    )
+  }else{
+    return (
+      <Wrapper  message={"Salvo!"}>
+          <Saved  />
+      </Wrapper>
+    )
+    
   }
-
-  /* BREAKPOINTS HOVER FUNCIONAR SO EM DISPOSITIVO COMPATIVEL */
-  @media (hover: hover){
-    transition: opacity 0.2s ease;
-    svg{
-      transition: opacity 0.2s ease;
-      opacity: 0.5;
-
-      :hover{
-        opacity: 1;
-      }
-
-    }
-    :hover{
-      &::before{
-        content: 'Salvo!';
-        background: #1B1919;
-        color: #EDECEC;
-        padding: 6px;
-        border-radius: 3px;
-        position: absolute;
-        top: 7px;
-        right: 43px;
-      }
-    }
-  }
-`
-
+}
 
 const SaveMessage = ({ isSaving }) => {
   return (
-    // isSaving !== null && 
-      <Wrapper>
-        {isSaving ? 'Salvando...' : <Saved />}
-      </Wrapper>
+        <Sign  isSaving={isSaving} />
   )
 }
 

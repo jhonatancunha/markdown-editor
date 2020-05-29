@@ -30,34 +30,32 @@ export const TextAreaCode = styled.textarea`
   border-right: 3px solid #231341;
 
   color: #EFECEC;
-  padding: 20px 0 -0px 20px;
+  padding: 20px;
+  overflow-y: scroll;
 
   :focus{
     border: 0;
   }
 `
 
-export const Footer = styled.footer`
-  position: fixed;
-  bottom: 0;
-  background: #15092D;
-  border-top: 3px solid #231341;
-  height: 77px;
-  width: 100%;
-  color: #C4C4C4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 
 //ARTICLE SIDE
-export const WrapperPreview = styled.article`
+export const WrapperPreview = styled.div`
   visibility: visible;
   background: #EFECEC;
   color: #1B1919;
   padding: 20px;
-  display: flex;
-  flex: 1;
+  width: 50vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-y: scroll;
+  
+  @media (min-width: 801px){
+    padding-top: 45px;
+    height: calc(100% - 77px);
+    position: absolute;
+    right: 0;
+  }
 
   @media (max-width: 800px){
     visibility: ${ props => props.open ? 'visible' : 'hidden'};
@@ -74,6 +72,7 @@ export const WrapperPreview = styled.article`
 //TITLE BAR
 export const WrapperTitle = styled.div`
   display: ${props => props.open ? 'none' : 'flex'};
+  z-index: 11;
   align-items: center;
   position: relative;
   flex-grow: 1;

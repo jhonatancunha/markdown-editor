@@ -87,7 +87,8 @@ class App extends Component {
       this.setState({
         title: this.state.files[fileID].title,
         value: this.state.files[fileID].content,
-        id: fileID
+        id: fileID,
+        isMenuOpen: false
       })
     }
 

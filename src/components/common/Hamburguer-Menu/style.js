@@ -12,7 +12,7 @@ export const Wrapper = styled.section`
   }
 
   div:nth-child(2){
-    transform: ${props => props.open ? 'translateX(-50px)' : 'translateX(0)'};
+    transform: ${props => props.open ? 'translateX(-100vw)' : 'translateX(0)'};
   }
 
   div:nth-child(3){

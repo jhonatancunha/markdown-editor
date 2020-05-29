@@ -13,5 +13,8 @@ export const GlobalStyle = createGlobalStyle`
   #root{
     height: 100vh;
     background: #15092D;
+    overflow-x: hidden;
   }
+
+
 `

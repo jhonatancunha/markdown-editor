@@ -4,31 +4,32 @@ import PropTypes from 'prop-types'
 //Components
 import Header from '../Header'
 import Files from '../Files'
-import SaveMessage from '../SaveMessage'
-
+import Footer from '../Footer'
 
 // Styles
-import { Wrapper, WrapperCode, TextAreaCode, Footer, WrapperPreview, TitleInput, TitleInformation, WrapperTitle, } from './style'
+import { Wrapper, WrapperCode, TextAreaCode, WrapperPreview, TitleInput, TitleInformation, WrapperTitle} from './style'
 
 const MarkDownEditor = ({ 
   value, 
   getMarkup,
   textareaRef,
-  files,
+  files = {},
   handleChange,
   handleOpenFile,
   title,
   isPreviewMobileOpen,
   isSaving,
+  isMenuOpen,
   ...props
 }) => 
-  (
+(
+  <>
     <Wrapper>
 
       <WrapperCode >
-        <Header {...props} isSaving={isSaving} open={isPreviewMobileOpen} />
+        <Header {...props} isMenuOpen={isMenuOpen} isSaving={isSaving} open={isPreviewMobileOpen} />
 
-        <WrapperTitle  >
+        <WrapperTitle  open={isPreviewMobileOpen}>
           <TitleInformation> TITLE </TitleInformation>
           <TitleInput
             onChange={handleChange('title')}
@@ -36,10 +37,11 @@ const MarkDownEditor = ({
             value={title} 
             placeholder="Digite aqui um título para seu arquivo..."/>
         </WrapperTitle>
-
-        <Files files={files} handleOpenFile={handleOpenFile}  />
+  
+        <Files isMenuOpen={isMenuOpen} files={files} handleOpenFile={handleOpenFile}  />
       
         <TextAreaCode
+          rows="4" cols="5"
           placeholder="Digite aqui..."
           value={value} 
           onChange={handleChange('value')}
@@ -50,9 +52,10 @@ const MarkDownEditor = ({
       </WrapperCode>
       <WrapperPreview open={isPreviewMobileOpen} className="view" dangerouslySetInnerHTML={getMarkup()} />
       
-      <Footer><span>© 2020.  <strong> Jhonatan Cunha</strong></span></Footer>
 
-  </Wrapper>  
+    </Wrapper>  
+    <Footer />
+  </>
 )
 
 MarkDownEditor.propTypes = {

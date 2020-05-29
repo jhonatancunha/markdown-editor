@@ -6,7 +6,8 @@ export const Wrapper = styled.header`
   height: 53px;
   display: flex;
   align-items: center;
-   
+  z-index: 10;
+
   svg{
     cursor: pointer;
     margin: 5px;
@@ -15,11 +16,22 @@ export const Wrapper = styled.header`
   }
 
   @media (max-width: 800px){
+    padding: 4px 15px 0 15px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
+  /* CENTRALIZANDO ICONES DO HEADER EM DIFERENTES TAMANHOS DE TELAS */
+  @media(min-width: 600px){
+    padding: 4px 37px 0 31px
+  }
+
+  @media(min-width: 801px){
+    padding: 0;
+  }
+ 
 `
 
 export const SvgButtons = styled.div`
