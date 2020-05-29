@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-
+  z-index: 12;
   overflow-y: scroll;
 
   @media (min-width: 801px){
@@ -52,8 +52,6 @@ export const Row = styled.li`
   @media (orientation: landscape){
     height: 10vh;
   }
-
-
 `
 
 export const TitleName = styled.button`

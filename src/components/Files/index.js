@@ -8,7 +8,6 @@ const Files = ({ handleOpenFile, files, isMenuOpen }) => {
   return (
   <>
     {/* VERIFICA SE FILES ESTÁ NULO CASO ESTIVER RETORNA WRAPPER VAZIO */}
-    
     {
     (files && Object.keys(files).length) ? 
     //TEM ARQUIVO IMPRIME ISSO
@@ -32,9 +31,6 @@ const Files = ({ handleOpenFile, files, isMenuOpen }) => {
         </Wrapper> 
     }
   </>
-      
-      
-    
   )
 }
 

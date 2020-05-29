@@ -1,21 +1,21 @@
 import React, {Component} from 'react';
 import { v4 } from 'node-uuid'
+import marked from 'marked'
+import hljs from 'highlight.js'
 
 // Components
 import MarkDownEditor from './components/Content'
-import marked from 'marked'
 
 // STYLE
 import { GlobalStyle } from './style'
+import 'highlight.js/styles/mono-blue.css';
 
-//HighLight.js IMPORTAÇÃO DINAMICA
-import('highlight.js').then((hljs) => {
-  marked.setOptions({
-    highlight: (code) => {
-      return hljs.highlightAuto(code).value
-    }
-  })
+import ('highlight.js').then(marked.setOptions({
+  highlight: (code) => {
+    return hljs.highlightAuto(code).value
+  }
 })
+)
 
 class App extends Component {
   constructor(){

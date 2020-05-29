@@ -25,7 +25,6 @@ const MarkDownEditor = ({
 (
   <>
     <Wrapper>
-
       <WrapperCode >
         <Header {...props} isMenuOpen={isMenuOpen} isSaving={isSaving} open={isPreviewMobileOpen} />
 
@@ -51,22 +50,17 @@ const MarkDownEditor = ({
 
       </WrapperCode>
       <WrapperPreview open={isPreviewMobileOpen} className="view" dangerouslySetInnerHTML={getMarkup()} />
-      
-
     </Wrapper>  
     <Footer />
   </>
 )
 
 MarkDownEditor.propTypes = {
- 
   value: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   getMarkup: PropTypes.func.isRequired,
   textareaRef: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired
 }
-
-
 
 export default MarkDownEditor

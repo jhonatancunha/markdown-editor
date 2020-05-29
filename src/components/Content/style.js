@@ -38,7 +38,6 @@ export const TextAreaCode = styled.textarea`
   }
 `
 
-
 //ARTICLE SIDE
 export const WrapperPreview = styled.div`
   visibility: visible;
@@ -64,7 +63,6 @@ export const WrapperPreview = styled.div`
     width: 100vw;
     height: calc(100vh - 77px - 51px);
     margin-top: 51px;
-
   }
 
 `

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const Wrapper = styled.div`
   position: relative;
 
@@ -21,7 +20,6 @@ export const Wrapper = styled.div`
       :hover{
         opacity: 1;
       }
-
     }
 
     :hover{

@@ -20,8 +20,6 @@ export const Wrapper = styled.section`
     position: relative;
     bottom: ${props => props.open ? '12px' : '0px'};
   }
-
-
 `
 
 export const Row = styled.div`

@@ -31,17 +31,15 @@ export const Wrapper = styled.header`
   @media(min-width: 801px){
     padding: 0;
   }
- 
 `
 
 export const SvgButtons = styled.div`
   margin-left: auto;
 `
 
-
 export const ButtonPreview = styled.button`
   display:none;
-  
+  cursor: pointer;
   @media (max-width: 800px){
     display: block;
     margin-left: ${props => props.previewOpen ? '7px' : '0'};

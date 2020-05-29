@@ -13,9 +13,7 @@ const loading = keyframes`
   80%{
     transform: translateY(-15px);
   }
-
 `
-
 const Wrapper = styled.div`
   justify-content: center;
   display:flex;
@@ -27,7 +25,6 @@ const Wrapper = styled.div`
     border-radius: 100%;
     margin: 2px;
     animation: ${loading} 0.9s linear infinite;
-
 
     @media(max-width: 800px){
     background: #EDECEC;
@@ -48,7 +45,6 @@ const Wrapper = styled.div`
   div:nth-child(4){
     animation-delay: -0.4s;
   }
-
 `
 
 export default () => {
