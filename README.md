@@ -24,8 +24,8 @@
 
 # :computer: Web View
 <p align="center">
-    <img src="img/web.png" alt="">
     <img src="img/web-menu.png" alt="">
+    <img src="img/web.png" alt="">
 </p>
 
 # :iphone: Mobile View
