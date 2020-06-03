@@ -9,9 +9,9 @@
 
 <br>
 
+
 ## :ballot_box_with_check: Demo Live
 - [Netlify - Clique Aqui](https://markdowneditorfree.netlify.app/)
-
 
 ## :bookmark: Sobre
 
@@ -24,14 +24,19 @@
 
 # :computer: Web View
 <p align="center">
-    <img src="imgs/stage1.png" alt="">
+    <img src="img/web.png" alt="">
+    <img src="img/web-menu.png" alt="">
 </p>
 
 # :iphone: Mobile View
 
-<p align="center">
-    <img src="imgs/mobile.png" alt="">
-</p>
+<table align="center">
+    <tr>
+        <td><img src="img/mob.png" alt=""></td>
+        <td><img src="img/mob-menu.png" alt=""></td>
+        <td><img src="img/mob-prev.png" alt=""></td>
+    </tr>
+ </table>
 
 
 
