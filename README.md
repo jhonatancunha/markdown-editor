@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h1 align="center">MarkDown Editor<h1>
+<p align="center">
+<img src="https://img.shields.io/github/repo-size/jhonatancunha/markdown-editor" alt="">
+<img src="https://img.shields.io/github/license/jhonatancunha/markdown-editor" alt="">
+<img src="https://img.shields.io/github/last-commit/jhonatancunha/markdown-editor" alt="">
+<img alt="Netlify" src="https://img.shields.io/netlify/d3ae9462-ce17-43fa-90b0-cd85d2313789?style=plastic">
+</p>
 
-In the project directory, you can run:
+<br>
 
-### `yarn start`
+## :ballot_box_with_check: Demo Live
+- [Netlify - Clique Aqui](https://markdowneditorfree.netlify.app/)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## :bookmark: Sobre
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+    Editor de markdown criado para facilitar a criação e visualização de arquivos em tempo real.
+</p>
 
-### `yarn build`
+<br>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# :computer: Web View
+<p align="center">
+    <img src="imgs/stage1.png" alt="">
+</p>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# :iphone: Mobile View
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+    <img src="imgs/mobile.png" alt="">
+</p>
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Tecnologias
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [ReactJS](https://pt-br.reactjs.org/)
+- [Create React App](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
+- [StoryBook](https://storybook.js.org/)
+- [Styled-Components](https://styled-components.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ❓ Como utilizar?
 
-## Learn More
+### Instalação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+$ cd markdown-editor
+$ yarn
+$ yarn start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# :ballot_box_with_check: Icons
 
-### Code Splitting
+- [Add Icon](https://www.flaticon.com/br/icone-gratis/mais_1828817?term=more&page=1&position=2
+)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- [Love Icon](https://www.flaticon.com/free-icon/love_2913124?term=heart&page=1&position=3)
+- [Saved Icon](https://www.flaticon.com/free-icon/okay_1786608?term=ok&page=1&position=38
+)
 
-### Analyzing the Bundle Size
+- [Delete Icon](https://www.flaticon.com/free-icon/rubbish_447002?term=delete&page=1&position=27)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- [Warning Icon](https://www.flaticon.com/free-icon/warning_1680012?term=attention&page=1&position=18)
+- [Folder Icon](https://www.flaticon.com/free-icon/file_1179233?term=folder&page=1&position=36)
 
-### Making a Progressive Web App
+- [Favicon](https://www.flaticon.com/free-icon/text_2899289?term=editor&page=1&position=47)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<p align="center">
+Made with :coffee: por :copyright: Jhonatan Cunha.
+</p>
