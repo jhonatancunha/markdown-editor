@@ -59,8 +59,6 @@ $ yarn start
 
 # :ballot_box_with_check: Icons
 
-- [Add Icon](https://www.flaticon.com/br/icone-gratis/mais_1828817?term=more&page=1&position=2)
-
 - [Saved Icon](https://www.flaticon.com/free-icon/okay_1786608?term=ok&page=1&position=38)
 
 - [Delete Icon](https://www.flaticon.com/free-icon/rubbish_447002?term=delete&page=1&position=27)
