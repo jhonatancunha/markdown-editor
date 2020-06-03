@@ -59,17 +59,13 @@ $ yarn start
 
 # :ballot_box_with_check: Icons
 
-- [Add Icon](https://www.flaticon.com/br/icone-gratis/mais_1828817?term=more&page=1&position=2
-)
+- [Add Icon](https://www.flaticon.com/br/icone-gratis/mais_1828817?term=more&page=1&position=2)
 
-- [Love Icon](https://www.flaticon.com/free-icon/love_2913124?term=heart&page=1&position=3)
-- [Saved Icon](https://www.flaticon.com/free-icon/okay_1786608?term=ok&page=1&position=38
-)
+- [Saved Icon](https://www.flaticon.com/free-icon/okay_1786608?term=ok&page=1&position=38)
 
 - [Delete Icon](https://www.flaticon.com/free-icon/rubbish_447002?term=delete&page=1&position=27)
 
 - [Warning Icon](https://www.flaticon.com/free-icon/warning_1680012?term=attention&page=1&position=18)
-- [Folder Icon](https://www.flaticon.com/free-icon/file_1179233?term=folder&page=1&position=36)
 
 - [Favicon](https://www.flaticon.com/free-icon/text_2899289?term=editor&page=1&position=47)
 
